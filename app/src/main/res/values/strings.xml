@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SistemaGLP</string>
+    <string name="titulo">DLPR Solutions</string>
+    <string name="login">Login</string>
+    <string name="digitarLogin">Digite seu Login</string>
+    <string name="senha">Senha</string>
+    <string name="digitarSenha">Digite sua senha</string>
+    <string name="btLogin">Fazer Login</string>
+    <string name="btLimpar">Limpar</string>
+    <string name="tituloRelatorio">Relatório</string>
+    <string name="btPesquisar">Pesquisar</string>
+    <string name="btLimparDados">Limpar Dados</string>
+    <string name="campoData">Digite a Data do início</string>
+    <string name="campoDataFinal">Digite a Data do Final</string>
+    <string name="campoProduto">Produto</string>
+    <string name="erro_logar">Login é obrigatório!</string>
+    <string name="erro_senha">Senha é obrigatória!</string>
+</resources>

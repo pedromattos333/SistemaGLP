@@ -40,7 +40,7 @@ public class LoginResources {
         RequestParams param = new RequestParams();
         param.add("login", usuario);
         param.add("senha", senha);
-        client.get(BASE_URL + URL, param, new AsyncHttpResponseHandler() {
+        client.post("http://192.168.0.12:8080/SistemaGlp/api/perfil/", param, new AsyncHttpResponseHandler() {
 
 
             @Override
@@ -49,7 +49,7 @@ public class LoginResources {
                 String resJSON = new String(bytes);
 
                 Gson gson = new Gson();
-                login = gson.fromJson(resJSON, Login.class);
+               login = gson.fromJson(resJSON, Login.class);
 
                 alertDialog.dismiss();
                 if(login != null){

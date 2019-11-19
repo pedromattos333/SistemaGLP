@@ -11,10 +11,9 @@ import com.example.alunos.sistemaglp.model.Login;
 import com.example.alunos.sistemaglp.resources.LoginResources;
 import com.j256.ormlite.dao.Dao;
 
-import java.sql.SQLException;
-
 public class LoginControl {
     private Dao<Login, Integer> loginDao;
+
     private LoginDao loginOrmDao;
     private MyORMLiteHelper helper;
 
@@ -36,38 +35,51 @@ public class LoginControl {
         this.editSenha = activity.findViewById(R.id.editSenha);
 
 
-//
-//      try{
-//         loginDao = loginOrmDao.getLoginDao();
+//     try{
+//         usuarioDao = usuarioOrmDao.getProdutoDao();
 //      } catch (SQLException e){
 //          e.printStackTrace();
-//      }
-  }
+//     }
+ }
 
-    public void ValidaUsuario(){
+        public void ValidaUsuario () {
+            if (editLogin.getText().toString().trim().isEmpty()) {
+                Toast.makeText(activity, R.string.erro_logar, Toast.LENGTH_LONG).show();
+                editLogin.requestFocus();
+                return;
+            } else if (editSenha.getText().toString().trim().isEmpty()) {
+                Toast.makeText(activity, R.string.erro_senha, Toast.LENGTH_LONG).show();
+                editSenha.requestFocus();
+                return;
+            }
 
-        login = null;
+        try {
+            login = null;
 
-        String l = editLogin.getText().toString();
-        String s = editSenha.getText().toString();
+            String l = editLogin.getText().toString();
+            String s = editSenha.getText().toString();
 
-        loginResource.verificaLogin(l,s);
-    }
-    public boolean validarCampos() {
-        if (editLogin.getText().toString().trim().isEmpty()) {
-            Toast.makeText(activity, R.string.erro_logar, Toast.LENGTH_LONG).show();
-            editLogin.requestFocus();
-            return false;
-        } else if (editSenha.getText().toString().trim().isEmpty()) {
-            Toast.makeText(activity, R.string.erro_senha, Toast.LENGTH_LONG).show();
-            editSenha.requestFocus();
+            loginResource.verificaLogin(l, s);
 
-            return false;
+              } catch (Exception e) {
+                  Toast.makeText(activity, "Falha ao logar", Toast.LENGTH_SHORT).show();
+                    return;
+            }
         }
-        return false;
+        public boolean validarCampos () {
+            if (editLogin.getText().toString().trim().isEmpty()) {
+                Toast.makeText(activity, R.string.erro_logar, Toast.LENGTH_LONG).show();
+                editLogin.requestFocus();
+                return false;
+            } else if (editSenha.getText().toString().trim().isEmpty()) {
+                Toast.makeText(activity, R.string.erro_senha, Toast.LENGTH_LONG).show();
+                editSenha.requestFocus();
+                return false;
+            }
+            return true;
+        }
+
+
     }
 
-
-
-}
 

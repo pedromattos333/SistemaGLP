@@ -23,8 +23,6 @@ public class LoginResources {
     private Activity activity;
     private AlertDialog alertDialog;
 
-    public LoginResources() {
-    }
 
     public LoginResources(Activity activity){
         this.activity = activity;
@@ -35,13 +33,12 @@ public class LoginResources {
     }
 
     public void verificaLogin(String usuario, String senha){
-        AsyncHttpClient client = new AsyncHttpClient();
-        client.setConnectTimeout(5000);
+
+        client = new AsyncHttpClient();
         RequestParams param = new RequestParams();
         param.add("login", usuario);
         param.add("senha", senha);
         client.post("http://192.168.0.12:8080/SistemaGlp/api/perfil/", param, new AsyncHttpResponseHandler() {
-
 
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {

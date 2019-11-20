@@ -15,4 +15,8 @@
     <string name="campoProduto">Produto</string>
     <string name="erro_logar">Login é obrigatório!</string>
     <string name="erro_senha">Senha é obrigatória!</string>
+    <string name="btProduto">Relatório de Produtos</string>
+    <string name="btPedido">Relatório de Pedidos</string>
+    <string name="tituloRelatorioProduto">Relatório de Produtos</string>
+    <string name="tituloRelatorioPedido">Relatório de Pedidos</string>
 </resources>

@@ -14,7 +14,7 @@ public class RelatorioDao {
         this.helper = helper;
     }
 
-    public Dao<Relatorio, Integer> getProdutoDao() throws SQLException {
+    public Dao<Relatorio, Integer> getRelatorioDao() throws SQLException {
         if(relatorioDao == null){
             relatorioDao = helper.getDao(Relatorio.class);
         }

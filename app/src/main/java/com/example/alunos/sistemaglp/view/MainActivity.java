@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.control.LoginControl;
@@ -11,6 +13,9 @@ import com.example.alunos.sistemaglp.control.LoginControl;
 public class MainActivity extends Activity {
 
     private LoginControl loginControl;
+    private ArrayAdapter adapter;
+    private ListView lvProduto;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

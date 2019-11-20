@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="14dp"
+    android:background="#2a2c30"
+    android:orientation="vertical"
+    tools:context=".view.LobbyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0388E5">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="132dp"
+
+            android:text="@string/tituloRelatorio"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_margin="18dp">
+
+        <Button
+
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#0388E5"
+            android:onClick="entrarTelaProduto"
+            android:text="@string/btProduto"
+            android:textColor="#fff" />
+
+
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#0388E5"
+            android:text="@string/btPedido"
+            android:textColor="#fff"
+            android:onClick="entrarTelaPedido"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

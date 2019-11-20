@@ -6,8 +6,8 @@ import android.widget.Toast;
 
 
 import com.example.alunos.sistemaglp.config.ApiParams;
-import com.example.alunos.sistemaglp.model.Login;
-import com.example.alunos.sistemaglp.model.Relatorio;
+import com.example.alunos.sistemaglp.model.RelatorioPedido;
+import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.google.gson.Gson;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
@@ -18,7 +18,7 @@ public class RelatorioProdutoResource {
     private static final String BASE_URL = ApiParams.getURL();
     private static final String URL = "relatorio";
     private AsyncHttpClient client;
-    private Relatorio relatorio;
+    private RelatorioProduto relatorio;
     private Activity activity;
     private AlertDialog alertDialog;
 
@@ -43,7 +43,7 @@ public class RelatorioProdutoResource {
                 String resJSON = new String(bytes);
 
                 Gson gson = new Gson();
-                relatorio = gson.fromJson(resJSON, Relatorio.class);
+                relatorio = gson.fromJson(resJSON, RelatorioProduto.class);
             }
 
             @Override

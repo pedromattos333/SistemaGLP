@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.alunos.sistemaglp.model.Relatorio;
+import com.example.alunos.sistemaglp.model.RelatorioPedido;
 import com.example.alunos.sistemaglp.view.RelatorioPedidoActivity;
 import com.example.alunos.sistemaglp.dao.MyORMLiteHelper;
 import com.example.alunos.sistemaglp.dao.RelatorioDao;
 import com.example.alunos.sistemaglp.resources.RelatorioPedidoResource;
 import com.example.alunos.sistemaglp.resources.RelatorioProdutoResource;
 import com.example.alunos.sistemaglp.view.RelatorioProdutoActivity;
-
-import java.sql.SQLException;
 
 public class RelatorioControl {
     private Activity activity;
@@ -24,8 +22,8 @@ public class RelatorioControl {
     private RelatorioPedidoResource relatorioPedidoResource;
     private ListView lvProduto;
     private ListView lvPedido;
-    private ArrayAdapter<Relatorio> adapterRelatorioProduto;
-    private ArrayAdapter<Relatorio> adapterRelatorioPedido;
+    private ArrayAdapter<RelatorioPedido> adapterRelatorioProduto;
+    private ArrayAdapter<RelatorioPedido> adapterRelatorioPedido;
 
 
     public RelatorioControl() {

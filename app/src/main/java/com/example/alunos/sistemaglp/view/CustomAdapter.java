@@ -11,6 +11,7 @@ import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.model.RelatorioProduto;
 
 import java.util.ArrayList;
+import java.util.zip.Inflater;
 
 
 public class CustomAdapter extends BaseAdapter {
@@ -21,7 +22,7 @@ public class CustomAdapter extends BaseAdapter {
     public CustomAdapter(Context context, ArrayList<RelatorioProduto> list) {
         this.list = list;
         this.context = context;
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = LayoutInflater.from(context);
 
     }
 
@@ -51,7 +52,6 @@ public class CustomAdapter extends BaseAdapter {
             holder.Marca = convertView.findViewById(R.id.tvMarca);
             holder.Quantidade = convertView.findViewById(R.id.tvQuantidade);
             holder.Data = convertView.findViewById(R.id.tvData);
-            convertView.setTag(holder);
 
             holder.Produto.setText(list.get(position).getProduto());
             holder.Situacao.setText(list.get(position).getSituacao());

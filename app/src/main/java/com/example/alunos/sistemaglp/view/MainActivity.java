@@ -13,8 +13,6 @@ import com.example.alunos.sistemaglp.control.LoginControl;
 public class MainActivity extends Activity {
 
     private LoginControl loginControl;
-    private ArrayAdapter adapter;
-    private ListView lvProduto;
 
 
     @Override

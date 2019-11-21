@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".view.RelatorioPedidoActivity"></activity>
+        <activity android:name=".view.RelatorioPedidoActivity" />
         <activity android:name=".view.RelatorioProdutoActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>

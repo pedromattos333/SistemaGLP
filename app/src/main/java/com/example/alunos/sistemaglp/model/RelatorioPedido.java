@@ -19,14 +19,13 @@ public class RelatorioPedido implements Serializable {
     @DatabaseField(canBeNull = false, width = 150)
     private String nomeMotorista;
     @DatabaseField(canBeNull = false)
-    private Date dataPedido;
+    private String dataPedido;
 
     public RelatorioPedido(){
 
     }
 
-    public RelatorioPedido(Long id, String cliente, String cnpj, String placaDoVeiculo, String nomeMotorista, Date dataPedido) {
-        this.id = id;
+    public RelatorioPedido(String cliente, String cnpj, String placaDoVeiculo, String nomeMotorista, String dataPedido) {
         this.cliente = cliente;
         this.cnpj = cnpj;
         this.placaDoVeiculo = placaDoVeiculo;
@@ -66,11 +65,11 @@ public class RelatorioPedido implements Serializable {
         this.nomeMotorista = nomeMotorista;
     }
 
-    public Date getDataPedido() {
+    public String getDataPedido() {
         return dataPedido;
     }
 
-    public void setDataPedido(Date dataPedido) {
+    public void setDataPedido(String dataPedido) {
         this.dataPedido = dataPedido;
     }
 

@@ -16,16 +16,15 @@ public class RelatorioProduto {
     @DatabaseField(canBeNull = false, width = 150)
     private String marca;
     @DatabaseField(canBeNull = false, width = 150)
-    private double quantidade;
-    @DatabaseField(canBeNull = false)
-    private Date  data;
+    private String quantidade;
+    @DatabaseField(canBeNull = false, width = 150)
+    private String  data;
 
     public RelatorioProduto() {
 
     }
 
-    public RelatorioProduto(Long id, String produto, String situacao, String marca, double quantidade, Date data) {
-        this.id = id;
+    public RelatorioProduto(String produto, String situacao, String marca, String quantidade, String data) {
         this.produto = produto;
         this.situacao = situacao;
         this.marca = marca;
@@ -65,19 +64,19 @@ public class RelatorioProduto {
         this.marca = marca;
     }
 
-    public double getQuantidade() {
+    public String getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(double quantidade) {
+    public void setQuantidade(String quantidade) {
         this.quantidade = quantidade;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
     }
 

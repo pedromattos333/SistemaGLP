@@ -37,7 +37,7 @@ public class RelatorioProdutoResource {
         // Inserir o header e testar na api
 
 
-        client.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioPedido", new AsyncHttpResponseHandler() {
+        client.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto", new AsyncHttpResponseHandler() {
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {
                 String resJSON = new String(bytes);

@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     android:background="#2a2c30"
     android:orientation="vertical"
-    android:padding="14dp"
-    tools:context=".view.RelatorioPedidoActivity">
+    android:padding="2dp"
+    >
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="70dp"
-
             android:text="@string/tituloRelatorioPedido"
             android:textColor="#fff"
             android:textSize="25dp"
@@ -40,8 +40,7 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lvPedido">
-
+            android:id="@+id/lvProduto">
 
         </ListView>
 

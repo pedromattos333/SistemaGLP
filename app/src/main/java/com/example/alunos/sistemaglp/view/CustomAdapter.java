@@ -46,18 +46,18 @@ public class CustomAdapter extends BaseAdapter {
         ViewHolder holder = new ViewHolder();
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.raw, null);
-            holder.Produto = convertView.findViewById(R.id.tvProduto);
 
+            holder.Produto = convertView.findViewById(R.id.tvProduto);
             holder.Situacao = convertView.findViewById(R.id.tvSituacao);
             holder.Marca = convertView.findViewById(R.id.tvMarca);
             holder.Quantidade = convertView.findViewById(R.id.tvQuantidade);
-            holder.Data = convertView.findViewById(R.id.tvData);
 
-            holder.Produto.setText(list.get(position).getProduto());
+
+            holder.Produto.setText(list.get(position).getNomeProduto());
             holder.Situacao.setText(list.get(position).getSituacao());
             holder.Marca.setText(list.get(position).getMarca());
             holder.Quantidade.setText(list.get(position).getQuantidade());
-            holder.Data.setText(list.get(position).getData());
+
 
         } else {
             holder = (ViewHolder) convertView.getTag();
@@ -72,7 +72,7 @@ public class CustomAdapter extends BaseAdapter {
         TextView Situacao;
         TextView Marca;
         TextView Quantidade;
-        TextView Data;
+
     }
 }
 

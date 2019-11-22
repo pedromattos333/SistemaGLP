@@ -9,27 +9,26 @@ import java.util.Date;
 public class RelatorioProduto {
     @DatabaseField(allowGeneratedIdInsert = true, generatedId = true)
     private Long id;
-    @DatabaseField(canBeNull = false, width = 150)
-    private String produto;
-    @DatabaseField(canBeNull = false, width = 150)
-    private String situacao;
-    @DatabaseField(canBeNull = false, width = 150)
+    @DatabaseField(canBeNull = false, width = 200)
     private String marca;
-    @DatabaseField(canBeNull = false, width = 150)
+    @DatabaseField(canBeNull = false, width = 200)
+    private String nomeProduto;
+    @DatabaseField(canBeNull = false, width = 200)
+    private String situacao;
+    @DatabaseField(canBeNull = false, width = 200)
     private String quantidade;
-    @DatabaseField(canBeNull = false, width = 150)
-    private String  data;
+    @DatabaseField(canBeNull = false, width = 200)
+    private Date  data;
 
     public RelatorioProduto() {
 
     }
 
-    public RelatorioProduto(String produto, String situacao, String marca, String quantidade, String data) {
-        this.produto = produto;
-        this.situacao = situacao;
+    public RelatorioProduto(String nomeProduto, String situacao, String marca, String quantidade) {
         this.marca = marca;
+        this.nomeProduto = nomeProduto;
+        this.situacao = situacao;
         this.quantidade = quantidade;
-        this.data = data;
     }
 
     public Long getId() {
@@ -40,12 +39,12 @@ public class RelatorioProduto {
         this.id = id;
     }
 
-    public String getProduto() {
-        return produto;
+    public String getNomeProduto() {
+        return nomeProduto;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
     }
 
     public String getSituacao() {
@@ -72,17 +71,17 @@ public class RelatorioProduto {
         this.quantidade = quantidade;
     }
 
-    public String getData() {
+    public Date getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Date data) {
         this.data = data;
     }
 
     @Override
     public String toString() {
-        return "Produto: " + getProduto() + "Situacao: " + getSituacao() + "Marca: " + getMarca() + "Quantidade " + getQuantidade() + "Data" + getData();
+        return "Nome: " + getNomeProduto() + "Situacao: " + getSituacao() + "Marca: " + getMarca() + "Quantidade " + getQuantidade();
     }
 
 }

@@ -28,31 +28,8 @@ public class RelatorioPedidoResource {
         alertDialog.setCanceledOnTouchOutside(false);
     }
 
-    public void listarRelatorio(){
-        alertDialog.show();
-        client = new AsyncHttpClient();
-
-        // Inserir o header e testar na api
-
-
-        client.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioPedido", new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int i, Header[] headers, byte[] bytes) {
-                String resJSON = new String(bytes);
-
-                Gson gson = new Gson();
-                relatorio = gson.fromJson(resJSON, RelatorioPedido.class);
-            }
-
-            @Override
-            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                alertDialog.dismiss();
-                Toast.makeText(activity, "Erro ao carregar relatórios!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
     }
-}
+
 
 
 

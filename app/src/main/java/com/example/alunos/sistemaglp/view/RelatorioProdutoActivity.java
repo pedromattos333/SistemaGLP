@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.dao.RelatorioDao;
@@ -31,6 +32,7 @@ public class RelatorioProdutoActivity extends Activity {
      ArrayList<RelatorioProduto>allist;
      Activity activity;
      AsyncHttpClient asyncHttpClient;
+     AlertDialog alertDialog;
      String MY_URL="http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto";
       RelatorioProduto relatorioProduto;
     //private AlertDialog alertDialog;
@@ -70,7 +72,8 @@ public class RelatorioProdutoActivity extends Activity {
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-
+                alertDialog.dismiss();
+                Toast.makeText(activity, "Erro ao carregar relatorios", Toast.LENGTH_SHORT).show();
             }
 
         });

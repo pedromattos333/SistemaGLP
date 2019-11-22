@@ -5,10 +5,9 @@ import android.content.Intent;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.alunos.sistemaglp.dao.RelatorioProdutoDao;
 import com.example.alunos.sistemaglp.model.RelatorioPedido;
 import com.example.alunos.sistemaglp.view.RelatorioPedidoActivity;
-import com.example.alunos.sistemaglp.dao.MyORMLiteHelper;
-import com.example.alunos.sistemaglp.dao.RelatorioDao;
 import com.example.alunos.sistemaglp.resources.RelatorioPedidoResource;
 import com.example.alunos.sistemaglp.resources.RelatorioProdutoResource;
 import com.example.alunos.sistemaglp.view.RelatorioProdutoActivity;
@@ -17,8 +16,8 @@ public class RelatorioControl {
     private Activity activity;
     private RelatorioProdutoResource relatorioProdutoResource;
     private MyORMLiteHelper helper;
-    private RelatorioDao relatorioOrmDao;
-    private RelatorioDao relatorioDao;
+    private RelatorioProdutoDao relatorioOrmDao;
+    private RelatorioProdutoDao relatorioDao;
     private RelatorioPedidoResource relatorioPedidoResource;
     private ListView lvProduto;
     private ListView lvPedido;
@@ -32,7 +31,7 @@ public class RelatorioControl {
     public RelatorioControl(Activity activity) {
         this.activity = activity;
         this.helper = new MyORMLiteHelper(activity);
-        this.relatorioOrmDao = new RelatorioDao(this.helper);
+        this.relatorioOrmDao = new RelatorioProdutoDao(this.helper);
         this.relatorioProdutoResource = new RelatorioProdutoResource(this.activity);
         this.relatorioPedidoResource = new RelatorioPedidoResource(this.activity);
     }

@@ -2,23 +2,16 @@ package com.example.alunos.sistemaglp.view;
 
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
-import com.example.alunos.sistemaglp.dao.RelatorioDao;
 import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.JsonHttpResponseHandler;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -65,7 +58,7 @@ public class RelatorioProdutoActivity extends Activity {
                 lvProduto.setAdapter(adapter);
 
                 for(RelatorioProduto item : allist){
-                   //RelatorioDao dao = new RelatorioDao().getRelatorioDao().create(item);
+                   //RelatorioProdutoDao dao = new RelatorioProdutoDao().getRelatorioDao().create(item);
                 }
 
             }

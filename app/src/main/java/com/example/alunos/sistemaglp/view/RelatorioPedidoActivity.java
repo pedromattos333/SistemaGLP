@@ -60,7 +60,7 @@ public class RelatorioPedidoActivity extends Activity {
                 lvPedido.setAdapter(adapter);
 
                 for(RelatorioPedido item : allist){
-                    //RelatorioDao dao = new RelatorioDao().getRelatorioDao().create(item);
+                    //RelatorioProdutoDao dao = new RelatorioProdutoDao().getRelatorioDao().create(item);
                 }
 
             }

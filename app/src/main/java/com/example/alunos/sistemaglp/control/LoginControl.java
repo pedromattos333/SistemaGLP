@@ -6,7 +6,6 @@ import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.dao.LoginDao;
-import com.example.alunos.sistemaglp.dao.MyORMLiteHelper;
 import com.example.alunos.sistemaglp.model.Login;
 import com.example.alunos.sistemaglp.resources.LoginResources;
 import com.j256.ormlite.dao.Dao;

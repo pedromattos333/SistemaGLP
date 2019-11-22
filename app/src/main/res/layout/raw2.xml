@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a2c30"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0388E5"
+        >
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#fff">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cliente"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:id="@+id/tvCliente"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="cnpj"
+            android:textColor="#000000"
+            android:textSize="16dp"
+            android:id="@+id/tvCnpj"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="placaDoVeiculo"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:id="@+id/tvPlacaDoVeiculo"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nomeMotorista"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:id="@+id/tvNomeMotorista"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="dataPedido"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:id="@+id/tvDataPedido"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

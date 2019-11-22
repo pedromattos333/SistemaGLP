@@ -32,7 +32,7 @@ public class RelatorioProdutoActivity extends Activity {
      ArrayList<RelatorioProduto>allist;
      Activity activity;
      AsyncHttpClient asyncHttpClient;
-     AlertDialog alertDialog;
+
 
       RelatorioProduto relatorioProduto;
     //private AlertDialog alertDialog;
@@ -72,7 +72,6 @@ public class RelatorioProdutoActivity extends Activity {
 
             @Override
             public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                alertDialog.dismiss();
                 Toast.makeText(activity, "Erro ao carregar relatorios", Toast.LENGTH_SHORT).show();
             }
 

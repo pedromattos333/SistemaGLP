@@ -13,5 +13,6 @@ public class RelatorioProdutoDao extends DaoHelper<RelatorioProduto> {
     public RelatorioProdutoDao(Context c) {
         super(c, RelatorioProduto.class);
     }
+
 }
 

@@ -6,23 +6,23 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.alunos.sistemaglp.dao.RelatorioProdutoDao;
+import com.example.alunos.sistemaglp.dao.helpers.ORMLiteHelper;
 import com.example.alunos.sistemaglp.model.RelatorioPedido;
+import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.example.alunos.sistemaglp.view.RelatorioPedidoActivity;
 import com.example.alunos.sistemaglp.resources.RelatorioPedidoResource;
 import com.example.alunos.sistemaglp.resources.RelatorioProdutoResource;
 import com.example.alunos.sistemaglp.view.RelatorioProdutoActivity;
 
+import java.util.ArrayList;
+
 public class RelatorioControl {
     private Activity activity;
+    ArrayList<RelatorioPedido> allist;
+    ArrayList<RelatorioProduto>allistP;
     private RelatorioProdutoResource relatorioProdutoResource;
-    private MyORMLiteHelper helper;
-    private RelatorioProdutoDao relatorioOrmDao;
-    private RelatorioProdutoDao relatorioDao;
-    private RelatorioPedidoResource relatorioPedidoResource;
-    private ListView lvProduto;
-    private ListView lvPedido;
-    private ArrayAdapter<RelatorioPedido> adapterRelatorioProduto;
-    private ArrayAdapter<RelatorioPedido> adapterRelatorioPedido;
+    private ORMLiteHelper helper;
+
 
 
     public RelatorioControl() {
@@ -30,25 +30,16 @@ public class RelatorioControl {
 
     public RelatorioControl(Activity activity) {
         this.activity = activity;
-        this.helper = new MyORMLiteHelper(activity);
-        this.relatorioOrmDao = new RelatorioProdutoDao(this.helper);
+        this.helper = new ORMLiteHelper(activity);
         this.relatorioProdutoResource = new RelatorioProdutoResource(this.activity);
-        this.relatorioPedidoResource = new RelatorioPedidoResource(this.activity);
+
     }
-
-    private void configurarListView(){
-        montarListView();
-    }
-
-    private void montarListView() {
-
-        }
-
-
-    public void onAttach(Activity activity){
-        this.activity = activity;
-    }
-
+//    public void manterRelatorioProduto(){
+//        for(RelatorioProduto item : allistP){
+//            RelatorioProdutoDao dao = new RelatorioProdutoDao().getRelatorioDao().create(item);
+//        }
+//
+//    }
     public void entrarProduto(){
         Intent it = new Intent(activity, RelatorioProdutoActivity.class);
         activity.startActivity(it);

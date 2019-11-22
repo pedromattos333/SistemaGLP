@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.control.RelatorioControl;
+import com.example.alunos.sistemaglp.dao.RelatorioPedidoDao;
+import com.example.alunos.sistemaglp.dao.RelatorioProdutoDao;
 import com.example.alunos.sistemaglp.model.RelatorioPedido;
 import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.google.gson.Gson;

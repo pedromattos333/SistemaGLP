@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.alunos.sistemaglp.R;
+import com.example.alunos.sistemaglp.dao.RelatorioDao;
 import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -31,7 +32,7 @@ public class RelatorioProdutoActivity extends Activity {
      Activity activity;
      AsyncHttpClient asyncHttpClient;
      String MY_URL="http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto";
-    RelatorioProduto relatorioProduto;
+      RelatorioProduto relatorioProduto;
     //private AlertDialog alertDialog;
 
     @Override
@@ -47,7 +48,7 @@ public class RelatorioProdutoActivity extends Activity {
     private void getData() {
 
         asyncHttpClient = new AsyncHttpClient();
-        asyncHttpClient.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto", new AsyncHttpResponseHandler(){
+        asyncHttpClient.get("http://10.10.164.105:8084/SistemaGlp/api/relatorio", new AsyncHttpResponseHandler(){
 
 
             @Override
@@ -60,6 +61,11 @@ public class RelatorioProdutoActivity extends Activity {
                 allist = gson.fromJson(resJSON, tipoLista);
                 CustomAdapter adapter = new CustomAdapter(RelatorioProdutoActivity.this, allist);
                 lvProduto.setAdapter(adapter);
+
+                for(RelatorioProduto item : allist){
+                   //RelatorioDao dao = new RelatorioDao().getRelatorioDao().create(item);
+                }
+
             }
 
             @Override

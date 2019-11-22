@@ -15,14 +15,12 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import cz.msebera.android.httpclient.Header;
 
 public class RelatorioProdutoResource {
-    private static final String BASE_URL = ApiParams.getURL();
-    private static final String URL = "relatorio";
     private AsyncHttpClient client;
     private RelatorioProduto relatorio;
     private Activity activity;
     private AlertDialog alertDialog;
 
-    public RelatorioProdutoResource(Activity activity){
+    public RelatorioProdutoResource(Activity activity) {
         this.activity = activity;
         alertDialog = (new AlertDialog.Builder(activity)).create();
         alertDialog.setTitle("Aguarde");
@@ -30,28 +28,7 @@ public class RelatorioProdutoResource {
         alertDialog.setCanceledOnTouchOutside(false);
     }
 
-    public void listarRelatorio(){
-        alertDialog.show();
-        client = new AsyncHttpClient();
+    public void getData() {
 
-        // Inserir o header e testar na api
-
-
-        client.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto", new AsyncHttpResponseHandler() {
-            @Override
-            public void onSuccess(int i, Header[] headers, byte[] bytes) {
-                String resJSON = new String(bytes);
-
-                Gson gson = new Gson();
-                relatorio = gson.fromJson(resJSON, RelatorioProduto.class);
-            }
-
-            @Override
-            public void onFailure(int i, Header[] headers, byte[] bytes, Throwable throwable) {
-                alertDialog.dismiss();
-                Toast.makeText(activity, "Erro ao carregar relatórios!", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
+       }
 }

@@ -3,14 +3,15 @@ package com.example.alunos.sistemaglp.dao.helpers;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.alunos.sistemaglp.model.Login;
+import com.example.alunos.sistemaglp.model.RelatorioPedido;
+import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.j256.ormlite.android.apptools.OrmLiteSqliteOpenHelper;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
-import com.senac.pedro.gunregister.model.Armamento;
-import com.senac.pedro.gunregister.model.Conta;
 
 public class  ORMLiteHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = "glp.db";

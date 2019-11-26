@@ -10,15 +10,15 @@ import java.util.Date;
 public class RelatorioPedido implements Serializable {
     @DatabaseField(allowGeneratedIdInsert = true, generatedId = true)
     private Long id;
-    @DatabaseField(canBeNull = false, width = 200)
+    @DatabaseField(canBeNull = false, width = 300)
     private String cliente;
-    @DatabaseField(canBeNull = false, width = 200)
+    @DatabaseField(canBeNull = false, width = 300)
     private String cnpj;
-    @DatabaseField(canBeNull = false, width = 200)
+    @DatabaseField(canBeNull = false, width = 300)
     private String placaDoVeiculo;
-    @DatabaseField(canBeNull = false, width = 200)
+    @DatabaseField(canBeNull = false, width = 300)
     private String nomeMotorista;
-    @DatabaseField(canBeNull = false, width = 200)
+    @DatabaseField(canBeNull = false, width = 300)
     private String dataPedido;
 
     public RelatorioPedido(){

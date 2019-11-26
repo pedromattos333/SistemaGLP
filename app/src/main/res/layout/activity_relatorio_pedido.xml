@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#2a2c30"
     android:orientation="vertical"
-    android:padding="2dp"
+    android:padding="1dp"
     >
 
 
@@ -24,7 +24,7 @@
             android:layout_marginLeft="70dp"
             android:text="@string/tituloRelatorioPedido"
             android:textColor="#fff"
-            android:textSize="25dp"
+            android:textSize="23dp"
             android:textStyle="bold" />
 
 

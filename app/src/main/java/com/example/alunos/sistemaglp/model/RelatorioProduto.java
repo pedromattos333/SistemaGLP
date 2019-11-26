@@ -79,9 +79,6 @@ public class RelatorioProduto {
         this.data = data;
     }
 
-    @Override
-    public String toString() {
-        return "Nome: " + getNomeProduto() + "Situacao: " + getSituacao() + "Marca: " + getMarca() + "Quantidade " + getQuantidade();
-    }
+
 
 }

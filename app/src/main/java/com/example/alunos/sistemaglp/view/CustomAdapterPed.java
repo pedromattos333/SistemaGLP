@@ -45,7 +45,7 @@ public class CustomAdapterPed extends BaseAdapter {
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.raw2, null);
 
-             holder.Cliente = convertView.findViewById(R.id.tvCliente);
+              holder.Cliente = convertView.findViewById(R.id.tvCliente);
               holder.CNPJ = convertView.findViewById(R.id.tvCnpj);
               holder.PlacaDoVeiculo = convertView.findViewById(R.id.tvPlacaDoVeiculo);
               holder.NomeMotorista = convertView.findViewById(R.id.tvNomeMotorista);

@@ -7,9 +7,11 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
+import com.example.alunos.sistemaglp.dao.RelatorioProdutoDao;
 import com.example.alunos.sistemaglp.model.RelatorioProduto;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.j256.ormlite.dao.Dao;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -44,7 +46,7 @@ public class RelatorioProdutoActivity extends Activity {
 
         asyncHttpClient = new AsyncHttpClient();
         asyncHttpClient.setTimeout(5000);
-        asyncHttpClient.get("http://10.10.164.105:8084/SistemaGlp/api/relatorioProduto", new AsyncHttpResponseHandler(){
+        asyncHttpClient.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioProduto", new AsyncHttpResponseHandler(){
 
 
 
@@ -61,6 +63,7 @@ public class RelatorioProdutoActivity extends Activity {
 
                 for(RelatorioProduto item : allist){
                    //RelatorioProdutoDao dao = new RelatorioProdutoDao().getRelatorioDao().create(item);
+
                 }
 
             }

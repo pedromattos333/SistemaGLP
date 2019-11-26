@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#2a2c30"
     android:orientation="vertical"
-    android:padding="1dp"
+
     >
 
 
@@ -21,10 +21,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="70dp"
+            android:layout_marginLeft="81dp"
             android:text="@string/tituloRelatorioPedido"
             android:textColor="#fff"
-            android:textSize="23dp"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
 
@@ -40,7 +40,7 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lvProduto">
+            android:id="@+id/lvPedido">
 
         </ListView>
 

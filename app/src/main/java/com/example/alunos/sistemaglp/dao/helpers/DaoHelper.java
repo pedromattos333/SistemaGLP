@@ -2,6 +2,7 @@ package com.example.alunos.sistemaglp.dao.helpers;
 
 import android.content.Context;
 
+
 import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;
@@ -15,6 +16,8 @@ public class DaoHelper<T> {
         this.classname = classname;
         if (mInstance==null) mInstance = new ORMLiteHelper(c.getApplicationContext());
     }
+
+
 
     public Dao<T, Integer> getDao() {
         try {

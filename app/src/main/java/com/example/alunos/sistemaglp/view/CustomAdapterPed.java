@@ -43,9 +43,9 @@ public class CustomAdapterPed extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder holder = new CustomAdapterPed.ViewHolder();
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.raw, null);
+            convertView = inflater.inflate(R.layout.raw2, null);
 
-              holder.Cliente = convertView.findViewById(R.id.tvCliente);
+             holder.Cliente = convertView.findViewById(R.id.tvCliente);
               holder.CNPJ = convertView.findViewById(R.id.tvCnpj);
               holder.PlacaDoVeiculo = convertView.findViewById(R.id.tvPlacaDoVeiculo);
               holder.NomeMotorista = convertView.findViewById(R.id.tvNomeMotorista);
@@ -55,6 +55,7 @@ public class CustomAdapterPed extends BaseAdapter {
            holder.Cliente.setText(list.get(position).getCliente());
            holder.CNPJ.setText(list.get(position).getCnpj());
            holder.PlacaDoVeiculo.setText(list.get(position).getPlacaDoVeiculo());
+           holder.NomeMotorista.setText(list.get(position).getNomeMotorista());
            holder.DataPedido.setText(list.get(position).getDataPedido());
 
 

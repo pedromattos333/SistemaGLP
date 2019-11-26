@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.example.alunos.sistemaglp.R;
 import com.example.alunos.sistemaglp.dao.LoginDao;
+import com.example.alunos.sistemaglp.dao.helpers.ORMLiteHelper;
 import com.example.alunos.sistemaglp.model.Login;
 import com.example.alunos.sistemaglp.resources.LoginResources;
 import com.j256.ormlite.dao.Dao;
@@ -14,7 +15,7 @@ public class LoginControl {
     private Dao<Login, Integer> loginDao;
 
     private LoginDao loginOrmDao;
-    private MyORMLiteHelper helper;
+    private ORMLiteHelper helper;
 
     private Activity activity;
     private LoginResources loginResource;
@@ -28,7 +29,7 @@ public class LoginControl {
         this.activity = activity;
         this.loginResource = new LoginResources(this.activity);
         this.loginOrmDao = new LoginDao(this.helper);
-        this.helper = new MyORMLiteHelper(activity);
+        this.helper = new ORMLiteHelper(activity);
 
         this.editLogin = activity.findViewById(R.id.editLogin);
         this.editSenha = activity.findViewById(R.id.editSenha);

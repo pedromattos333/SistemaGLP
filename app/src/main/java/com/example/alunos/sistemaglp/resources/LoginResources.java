@@ -38,7 +38,7 @@ public class LoginResources {
         RequestParams param = new RequestParams();
         param.add("login", usuario);
         param.add("senha", senha);
-        client.post("http://192.168.0.12:8080/SistemaGlp/api/perfil", param, new AsyncHttpResponseHandler() {
+        client.post("http://10.10.164.105:8084/SistemaGlp/api/perfil", param, new AsyncHttpResponseHandler() {
 
             @Override
             public void onSuccess(int i, Header[] headers, byte[] bytes) {

@@ -47,7 +47,7 @@ public class RelatorioPedidoActivity extends Activity {
     private void getData() {
 
         asyncHttpClient = new AsyncHttpClient();
-        asyncHttpClient.get("http://192.168.0.12:8080/SistemaGlp/api/relatorioPedido", new AsyncHttpResponseHandler(){
+        asyncHttpClient.get("http://10.10.164.105:8084/SistemaGlp/api/relatorioPedido", new AsyncHttpResponseHandler(){
 
 
             @Override
